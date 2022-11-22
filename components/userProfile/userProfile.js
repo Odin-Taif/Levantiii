@@ -1,6 +1,6 @@
 import { MdAdd } from "react-icons/md";
 import style from "./userProfile.module.scss";
-
+import Link from "next/link";
 const UserProfile = ({ existedUser }) => {
   const signOut = () => {
     logout();
