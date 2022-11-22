@@ -1,0 +1,44 @@
+[debug] [2022-09-29T15:27:42.600Z] ----------------------------------------------------------------------
+[debug] [2022-09-29T15:27:42.602Z] Command:       /usr/local/bin/node /usr/local/bin/firebase emulators:start --import ./buckups --export-on-exit
+[debug] [2022-09-29T15:27:42.603Z] CLI Version:   11.11.0
+[debug] [2022-09-29T15:27:42.603Z] Platform:      darwin
+[debug] [2022-09-29T15:27:42.603Z] Node Version:  v16.14.1
+[debug] [2022-09-29T15:27:42.605Z] Time:          Thu Sep 29 2022 17:27:42 GMT+0200 (Central European Summer Time)
+[debug] [2022-09-29T15:27:42.605Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-09-29T15:27:42.673Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-09-29T15:27:42.673Z] > authorizing via signed-in user (mjd.reklam@gmail.com)
+[debug] [2022-09-29T15:27:42.950Z] java version "18.0.2" 2022-07-19
+
+[debug] [2022-09-29T15:27:42.951Z] Java(TM) SE Runtime Environment (build 18.0.2+9-61)
+Java HotSpot(TM) 64-Bit Server VM (build 18.0.2+9-61, mixed mode, sharing)
+
+[debug] [2022-09-29T15:27:42.956Z] Parsed Java major version: 18
+[info] i  emulators: Starting emulators: auth, functions, firestore, database, hosting, pubsub, storage {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, functions, firestore, database, hosting, pubsub, storage"}}
+[debug] [2022-09-29T15:27:43.010Z] [hub] writing locator at /var/folders/8t/dkd7z9sx0b9brpmc_5by674r0000gn/T/hub-levantisk-mat.json
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: eventarc {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1meventarc\u001b[22m"}}
+[info] i  emulators: Shutting down emulators. {"metadata":{"emulator":{"name":"hub"},"message":"Shutting down emulators."}}
+[info] i  functions: Stopping Functions Emulator {"metadata":{"emulator":{"name":"functions"},"message":"Stopping Functions Emulator"}}
+[info] i  hub: Stopping emulator hub {"metadata":{"emulator":{"name":"hub"},"message":"Stopping emulator hub"}}
+[debug] [2022-09-29T15:27:43.063Z] Error: Cannot find module '/Users/mjdthif/Desktop/LevantiKontakt/functions/package.json'
+Require stack:
+- /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js
+- /usr/local/lib/node_modules/firebase-tools/lib/emulator/controller.js
+- /usr/local/lib/node_modules/firebase-tools/lib/emulator/commandUtils.js
+- /usr/local/lib/node_modules/firebase-tools/lib/commands/database-get.js
+- /usr/local/lib/node_modules/firebase-tools/lib/commands/index.js
+- /usr/local/lib/node_modules/firebase-tools/lib/index.js
+- /usr/local/lib/node_modules/firebase-tools/lib/bin/firebase.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:778:27)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at FunctionsEmulator.getNodeBinary (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:607:21)
+    at FunctionsEmulator.start (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulator.js:179:39)
+    at Function.start (/usr/local/lib/node_modules/firebase-tools/lib/emulator/registry.js:16:24)
+    at startEmulator (/usr/local/lib/node_modules/firebase-tools/lib/emulator/controller.js:254:44)
+    at Object.startAll (/usr/local/lib/node_modules/firebase-tools/lib/emulator/controller.js:340:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async /usr/local/lib/node_modules/firebase-tools/lib/commands/emulators-start.js:32:43
+[error] 
+[error] Error: An unexpected error has occurred.

@@ -1,0 +1,20 @@
+.sideBarMenu {
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: left;
+}
+
+.sideBarItem {
+  padding: 0.5rem;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  text-decoration: none;
+  transition: 0.2s ease-in-out;
+  a {
+    color: var(--color-black);
+    &:hover {
+      color: var(--color-gold);
+      cursor: pointer;
+    }
+  }
+}

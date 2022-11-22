@@ -1,0 +1,117 @@
+.container {
+  display: grid;
+  width: 100%;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+.wraper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  overflow: hidden;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  margin: 0.4rem;
+  padding: 0.4rem;
+}
+//-=-=-=-hide the scrollbar-=-=-=-=-
+/* Hide scrollbar for Chrome, Safari and Opera */
+.wraper::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.wraper {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.menuContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-left: 1px solid var(--color-white);
+  border-right: 1px solid var(--color-white);
+  padding: 0.2rem;
+}
+.serivcesCard {
+  background: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 0.5rem;
+  max-height: 100px;
+  max-width: 100px;
+  width: 100px;
+  height: 100px;
+  padding: 0.2rem;
+  margin: 0.3rem;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+  }
+}
+.serivcesCardActive {
+  background: var(--color-gold);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 0.5rem;
+  max-height: 100px;
+  max-width: 100px;
+  width: 100px;
+  height: 100px;
+  padding: 0.2rem;
+  margin: 0.3rem;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+  }
+}
+.buttonsContainer {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  padding: 0.5rem;
+  width: 100%;
+  align-items: left;
+  text-align: left;
+  justify-content: space-between;
+}
+.arrowButton {
+  padding: 1rem;
+  margin: 1rem;
+}
+.title {
+  position: relative;
+  color: var(--color-white);
+  margin: 0.4rem;
+  padding: 0.5rem;
+  border-left: 2px solid var(--color-primary);
+}
+
+//-=-=-=-=-=-=-=-=-=-=-Media Query|||
+@media screen and (min-width: 1200px) {
+  .buttonsContainer {
+    display: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .buttonsContainer {
+    display: none;
+  }
+}
+@media screen and (min-width: 769px) {
+  .buttonsContainer {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+}

@@ -1,0 +1,84 @@
+.contactContainer {
+  display: flex;
+  margin: auto;
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  padding: 2rem 0rem;
+  background: linear-gradient(to right, var(--color-primary), #000000);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/*++++++++++++   Form Styling  ++++++++++++++*/
+
+.form {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to right, var(--color-primary), #000000);
+  border-top: 1px solid var(--color-primary);
+  border-right: 1px solid var(--color-primary);
+  border-bottom: 1px solid var(--color-primary);
+  padding: 1rem;
+  margin: auto;
+  max-width: 700px;
+  max-width: 500px;
+  width: 100%;
+  border-radius: 0.1rem;
+  gap: 1.4rem;
+  input,
+  textarea {
+    color: var(--color-primary);
+    background-color: transparent;
+    border-radius: 0.2rem;
+    border: 1px solid var(--color-primary);
+    padding: 1rem;
+    resize: none;
+    max-width: 500px;
+    width: 100%;
+  }
+  input:focus {
+    background-color: var(--color-primary2);
+    color: var(--color-white);
+  }
+  textarea:focus {
+    background-color: var(--color-primary2);
+    color: var(--color-white);
+  }
+}
+.formHeader {
+  font-size: 1.4rem;
+  color: var(--color-white);
+}
+
+.formBtn {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  width: max-content;
+  width: 100%;
+  margin: auto;
+  background-color: rgb(0, 65, 2);
+  display: inline-block;
+  color: var(--color-white);
+  padding: 0.5rem 3rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  border: none;
+  transition: var(--transition);
+  &:hover {
+    background-color: rgb(4, 130, 8);
+  }
+}
+//-=-=-=-=-=-=-=- Media Query
+@media screen and (max-width: 1080px) {
+  .contactContainer {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .contactForm {
+    margin-bottom: 1rem;
+  }
+}

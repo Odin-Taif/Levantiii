@@ -1,0 +1,85 @@
+.headerContainer {
+  height: auto;
+  margin: auto;
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: 30% 75%;
+  gap: 1%;
+  align-items: left;
+  text-align: left;
+}
+.headerTitle {
+  color: var(--color-primary);
+  font-size: 1rem;
+}
+.headerDiscription {
+  font-size: 1rem;
+}
+.headerBanner {
+  width: 95%;
+  height: 100%;
+  color: black;
+  margin: auto;
+  border-radius: 0.2rem;
+}
+
+.QrcodeContainer {
+  max-width: 500px;
+  width: auto;
+  height: 100%;
+  align-items: center;
+  text-align: center;
+  animation: mymove 2s;
+  animation-iteration-count: 2;
+}
+.squre {
+  background-color: aliceblue;
+  border: 0.5rem solid rgba(255, 255, 255, 0.522);
+  padding: 0.2rem;
+  margin-bottom: 3rem;
+}
+.signa:hover {
+  border: none;
+}
+@keyframes mymove {
+  20% {
+    transform: scale(1.1);
+  }
+}
+
+.signupContainer {
+  height: auto;
+  margin: auto;
+  align-items: center;
+  text-align: center;
+}
+/* ++++++++++++++++++++ Media Querey   ++++++++++++++++ */
+@media screen and (max-width: 1200px) {
+  .headerText {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .headerContainer {
+    grid-template-columns: 100%;
+  }
+  .headerText {
+    width: 70%;
+    padding: auto;
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 769px) {
+  .headerContainer {
+    margin: auto;
+  }
+  .headerText {
+    width: 99%;
+    font-size: 0.6rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .headerText {
+    font-size: 0.6rem;
+  }
+}

@@ -1,0 +1,12 @@
+.profilePic {
+  padding: 3rem 2rem;
+  background: linear-gradient(#000000, rgb(0, 6, 83));
+  border-radius: 0.5rem;
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  gap: 5%;
+}
+
+.profileImage {
+  border-radius: 0.1rem;
+}

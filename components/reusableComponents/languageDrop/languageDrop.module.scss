@@ -1,0 +1,24 @@
+//-=-=-=-=-=-=-=-=-=-=-=-=-=-=-Languages btn--=-=-=-=-=-=-=-//
+.langDiv {
+  font-size: 1rem;
+  margin: 1rem;
+}
+.langBtnDiv {
+  display: block;
+}
+.langBtn {
+  display: flex;
+  border-radius: 0.1rem;
+  white-space: nowrap;
+  padding: 0.4rem 1rem;
+  color: var(--color-primary);
+  font-size: 0.8rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  &:hover {
+    color: rgb(212, 207, 207);
+  }
+}

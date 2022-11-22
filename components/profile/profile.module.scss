@@ -1,0 +1,41 @@
+//-=-=-=-=-=-=-=-=-=- Logo style-=-=-=-=-=-
+.avatarContainer {
+  display: flex;
+  position: absolute;
+  right: 0;
+  margin: 1rem;
+  color: var(--color-gold);
+  justify-self: flex-start;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 100%;
+  border: 2px solid white;
+}
+.avatarImage {
+  cursor: pointer;
+  border-radius: 100%;
+  border: 1px solid white;
+}
+.displayName {
+  color: var(--color-gold);
+  margin: 1rem;
+  border-bottom: 1px solid black;
+}
+
+.checkoutContainer {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(to left, var(--color-primary), #000000);
+  border-top: 1px solid white;
+  max-width: 430px;
+  width: 100%;
+  justify-content: space-between;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-bottom: 1px solid rgb(101, 96, 96);
+}

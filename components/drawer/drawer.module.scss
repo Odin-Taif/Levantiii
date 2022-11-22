@@ -1,0 +1,55 @@
+.closeBtn {
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  text-align: left;
+  width: 2rem;
+  font-size: 2rem;
+  margin-top: -3rem;
+  margin-left: -2rem;
+  border: none;
+  background-color: transparent;
+  color: #000000;
+  cursor: pointer;
+  border-radius: 0.2rem;
+  &:hover {
+    transform: scale(1.1);
+    color: #c10404;
+  }
+}
+
+.linkWrapper {
+  padding: 0.5rem;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  text-decoration: none;
+  transition: 0.2s ease-in-out;
+  a {
+    color: var(--color-black);
+    &:hover {
+      color: var(--color-gold);
+      cursor: pointer;
+    }
+  }
+}
+//-=-=-=-=-=-=-=-Medai Querey-=-=-=-=-=
+
+@media screen and (min-width: 1200px) {
+  .drawerContainer {
+    display: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .drawerContainer {
+    display: none;
+  }
+}
+@media screen and (min-width: 769px) {
+  .drawerContainer {
+    display: none;
+  }
+}
+@media screen and (min-width: 480px) {
+  .homeContainer {
+    display: inline-block;
+  }
+}

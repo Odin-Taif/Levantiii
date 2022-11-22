@@ -1,0 +1,68 @@
+.carouselContainer {
+  cursor: grab;
+  overflow-x: hidden;
+}
+.carouselWrapper {
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+  border-left: 1px solid var(--color-primary);
+}
+.titleContainer {
+  margin: auto;
+  align-items: center;
+  text-align: center;
+  border-bottom: 1px solid var(--color-primary);
+}
+.sliderTitle {
+  font-size: 2rem;
+  color: white;
+}
+.imageContainer {
+  min-height: 10rem;
+  min-width: 15rem;
+  padding: 1rem;
+  background: linear-gradient(to left, black, var(--color-primary));
+}
+.imageStyle {
+  border-radius: 0.1rem;
+}
+.buttonsContainer {
+  padding: 0.2rem;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+.arrowButton {
+  padding: 1rem;
+}
+//-=-=-=-=-=-=-=-Medai Querey-=-=-=-=-=
+
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media screen and (max-width: 769px) {
+  .container {
+    max-width: 769px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+  .imageContainer {
+    &:hover {
+      transition: all 400ms ease-in-out;
+      transform: scale(1);
+    }
+  }
+}

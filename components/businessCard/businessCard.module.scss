@@ -1,0 +1,88 @@
+.businessCard {
+  background-color: #02404096;
+  color: rgb(0, 0, 0);
+  backdrop-filter: blur(5px);
+  max-width: 600px;
+  width: 100%;
+  margin: 3rem auto;
+  height: auto;
+  padding: 0.3rem;
+  border-radius: 0.4rem;
+  box-shadow: var(--dark-shadow);
+  h1,
+  p {
+    color: rgb(235, 235, 235);
+    font-size: 1rem;
+    margin: 0.7rem;
+  }
+}
+.profile {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  column-gap: 0.75rem;
+  align-items: center;
+  margin: 1rem;
+  img {
+    width: 85px;
+    height: 85px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: var(--light-shadow);
+  }
+}
+.intro {
+  max-width: 300px;
+  width: auto;
+  align-items: left;
+  text-align: left;
+  margin: auto 2rem;
+  padding: auto;
+  color: #ffff;
+  font-size: 1.2rem;
+  h2 {
+    border-left: 1px solid var(--color-white);
+    padding-left: 0.4rem;
+  }
+}
+.funcContianer {
+  display: flex;
+  justify-content: space-around;
+  font-size: 2rem;
+  padding: 1rem;
+  color: #ffff;
+  border-bottom: 1px solid var(--color-white);
+}
+.linksContainer {
+  padding: 2rem;
+  margin: 1rem;
+  background-color: #02404096;
+}
+
+.linkWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  background-color: rgb(4, 4, 4);
+  padding: 1rem;
+  margin: 1rem auto;
+  border-radius: 0.4rem;
+  &:hover {
+    background-color: rgb(145, 140, 140);
+    cursor: pointer;
+  }
+}
+.addWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  background-color: rgb(35, 55, 93);
+  padding: 0.5rem;
+  margin: 3rem auto;
+  border-radius: 0.4rem;
+  &:hover {
+    background-color: rgb(51, 65, 92);
+    cursor: pointer;
+  }
+}

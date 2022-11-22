@@ -1,0 +1,59 @@
+.serivcesCard {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 0.3rem;
+  max-height: 400px;
+  max-width: 500px;
+  width: 250px;
+  height: 250px;
+  padding: 0.4rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.01);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+}
+.serivcesIcon {
+  max-height: 6rem;
+  max-width: 6rem;
+  width: 6rem;
+  height: 6rem;
+  margin: 0.5rem;
+}
+.servicesH1 {
+  font-size: 1.2rem;
+  color: #005559;
+  margin-bottom: 10px;
+}
+.servicesP {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+//-=-=-=-=-=-=-=-=-=-=-Media Query|||
+@media screen and (max-width: 1200px) {
+  .serivcesCard {
+    max-height: 250px;
+    max-width: 250px;
+    width: 250px;
+    height: 250px;
+  }
+}
+@media screen and (max-width: 1024px) {
+}
+@media screen and (max-width: 769px) {
+  .serivcesCard {
+    transition: all;
+    max-height: 500px;
+    max-width: 500px;
+    width: auto;
+    margin: 5px;
+  }
+}
+@media screen and (max-width: 480px) {
+}

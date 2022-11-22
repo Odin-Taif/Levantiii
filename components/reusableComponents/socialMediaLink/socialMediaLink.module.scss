@@ -1,0 +1,27 @@
+.cardLinks {
+  font-size: 1.7rem;
+  margin: 0.4rem 2rem;
+  padding: 0.1rem;
+  border-bottom: 1px solid rgba(201, 197, 188, 0.595);
+  color: rgb(179, 119, 8);
+  display: flex;
+  align-items: center;
+}
+.cardLinks:hover {
+  color: rgb(47, 39, 24);
+}
+
+.linkWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  background-color: rgb(4, 4, 4);
+  padding: 1rem;
+  margin: 1rem auto;
+  border-radius: 0.4rem;
+  &:hover {
+    background-color: rgb(145, 140, 140);
+    cursor: pointer;
+  }
+}

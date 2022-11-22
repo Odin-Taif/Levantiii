@@ -1,0 +1,14 @@
+.cartItem {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  padding: 0.2rem;
+  color: white;
+  overflow: hidden;
+}
+.itemCounter {
+  display: flex;
+  align-items: center;
+}

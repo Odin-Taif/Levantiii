@@ -1,0 +1,35 @@
+.homeContainer {
+  display: grid;
+  grid-template-columns: 3% 97%;
+  background-color: rgb(0, 0, 0);
+  height: auto;
+  padding: auto;
+  margin: 1rem auto;
+  font-size: 1rem;
+}
+.socialMediaBar {
+  border-right: 1px solid var(--color-primary2);
+}
+
+//-=-=-=-=-=-=-=-Medai Querey-=-=-=-=-=
+
+@media screen and (max-width: 1200px) {
+  .homeContainer {
+    grid-template-columns: 5% 95%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .homeContainer {
+    grid-template-columns: 5% 95%;
+  }
+}
+@media screen and (max-width: 769px) {
+  .homeContainer {
+    grid-template-columns: 5% 95%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .homeContainer {
+    grid-template-columns: 100%;
+  }
+}

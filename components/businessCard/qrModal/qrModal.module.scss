@@ -1,0 +1,83 @@
+/* The Modal (background) */
+.modal {
+  display: flex; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modalContent {
+  position: relative;
+  background-color: #fefefe;
+  border-radius: 0.5rem;
+  margin: auto;
+  padding: 0;
+  max-width: auto;
+  width: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+.modalBody {
+  background-color: var(--color-primary);
+}
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modalFooter {
+  padding: 0.2rem 1rem;
+  margin: auto;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+.modalBtn {
+  background-color: var(--color-primary);
+  border: none;
+  margin: 0.5rem auto;
+  padding: 0.5rem;
+  cursor: pointer;
+  width: 100%;
+  color: #fefefe;
+  border-radius: 0.2rem;
+  &:hover {
+    background-color: #076770;
+  }
+}

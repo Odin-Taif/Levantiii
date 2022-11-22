@@ -1,0 +1,17 @@
+.btn {
+  font-size: 0.8rem;
+  font-style: bold;
+  max-width: auto;
+  background-color: var(--color-primary2);
+  color: var(--color-white);
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 2px;
+  cursor: pointer;
+  border: none;
+  &:hover {
+    background-color: var(--color-primary);
+    transition: var(--transition);
+    transform: scale(0.98);
+  }
+}

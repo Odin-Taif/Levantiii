@@ -1,0 +1,46 @@
+.serivcesIcon {
+  max-height: 1rem;
+  max-width: 1rem;
+  width: 1rem;
+  height: 1rem;
+  margin: 0.5rem;
+}
+.servicesH1 {
+  font-size: 1rem;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+}
+.servicesP {
+  font-size: 0.9rem;
+  text-align: center;
+}
+.servicesH1::selection {
+  color: var(--color-primary);
+  background: transparent;
+}
+.servicesP::selection {
+  color: rgb(0, 0, 0);
+  background: transparent;
+}
+//-=-=-=-=-=-=-=-=-=-=-Media Query|||
+@media screen and (max-width: 1200px) {
+  .serivcesCard {
+    max-height: 100px;
+    max-width: 100px;
+    width: 100px;
+    height: 100px;
+  }
+}
+@media screen and (max-width: 1024px) {
+}
+@media screen and (max-width: 769px) {
+  .serivcesCard {
+    transition: all;
+    max-height: 100px;
+    max-width: 100px;
+    width: 100px;
+    height: 100px;
+  }
+}
+@media screen and (max-width: 480px) {
+}

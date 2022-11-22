@@ -1,0 +1,38 @@
+.container {
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.sliderTitle {
+  font-size: 2rem;
+  color: white;
+}
+.buttonsContainer {
+  padding: 0.4rem;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+.arrowButton {
+  padding: 1rem;
+}
+
+.rowContainer {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  height: auto;
+  background-color: var(--color-primary);
+  padding: 2rem;
+  overflow-x: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  scroll-behavior: smooth;
+}
+.rowContainer::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */

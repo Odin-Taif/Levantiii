@@ -1,0 +1,330 @@
+/* The Modal (background) */
+.modal {
+  display: flex; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modalContent {
+  position: relative;
+  background-color: #fefefe;
+  border-radius: 0.5rem;
+  margin: auto;
+  padding: 0;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 2px 16px;
+}
+
+.imgEdit {
+  margin: 1rem;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: red;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.modalFooter {
+  padding: 0.2rem 1rem;
+  margin: auto;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.modalBtn {
+  background-color: var(--color-primary);
+  border: none;
+  margin: 0.5rem auto;
+  padding: 0.5rem;
+  cursor: pointer;
+  width: 100%;
+  color: #fefefe;
+  border-radius: 0.2rem;
+  &:hover {
+    background-color: #076770;
+  }
+}
+
+// / drop zone css
+
+.dropzone {
+  position: relative;
+  border: 10px dotted #fff;
+  border-radius: 20px;
+  color: white;
+  font: bold 24px/200px arial;
+  height: 200px;
+  margin: 30px auto;
+  text-align: center;
+  width: 200px;
+  // &:hover{
+  //   cursor: pointer;
+  // }
+}
+
+.dropzone.hover {
+  border: 10px solid #fe5;
+  color: #fe5;
+}
+
+.dropzone.dropped {
+  background: #222;
+  border: 10px solid #444;
+}
+
+.dropzone div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.dropzone img {
+  border-radius: 10px;
+  vertical-align: middle;
+  max-width: 95%;
+  max-height: 95%;
+}
+
+.dropzone [type="file"] {
+  cursor: pointer;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+//-=-=-=-=-=-
+.contactContainer {
+  display: flex;
+  margin: auto;
+  max-width: 1000px;
+  width: 100%;
+  height: 100%;
+  // background: linear-gradient(to bottom, var(--color-primary2), #000000);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.postCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+  max-width: 500px;
+  width: 100%;
+}
+.errorMsg {
+  text-align: left;
+  color: bl--color-black;
+  padding: 0.3rem;
+  background: linear-gradient(to left, var(--color-white), #e60000);
+  border-radius: 0.1rem;
+  margin-top: -1rem;
+}
+.whoAmI {
+  margin: auto;
+  color: var(--color-black);
+  border-bottom: 1px solid var(--color-primary2);
+  max-width: 300px;
+  width: 100%;
+  text-align: left;
+  text-align: left;
+}
+
+.contactForm {
+  padding: 1rem;
+  margin: auto;
+}
+/*++++++++++++   Form Styling  ++++++++++++++*/
+.form {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+
+  border-right: 1px solid var(--color-primary2);
+  border-left: 1px solid var(--color-primary2);
+  border-bottom: 1px solid var(--color-primary2);
+  padding: 1rem;
+  margin: auto;
+  max-width: auto;
+  width: auto;
+  height: auto;
+  border-radius: 0.1rem;
+  gap: 1.4rem;
+
+  input,
+  textarea {
+    color: var(--color-black);
+    background-color: transparent;
+    border-radius: 0.2rem;
+    border: 1px solid var(--color-primary2);
+    padding: 1rem;
+    resize: none;
+    max-width: 500px;
+    width: 500px;
+  }
+  input:focus {
+    background-color: var(--color-primary2);
+    color: var(--color-black);
+  }
+  textarea:focus {
+    background-color: var(--color-primary2);
+    color: var(--color-black);
+  }
+}
+.formHeader {
+  font-size: 1.4rem;
+  padding: 1rem;
+  margin: auto;
+  color: var(--color-black);
+  border-bottom: 1px solid var(--color-primary2);
+}
+
+.formBtn {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  width: max-content;
+  width: 100%;
+  margin: auto;
+  background-color: var(--color-gold);
+  display: inline-block;
+  color: var(--color-black);
+  padding: 0.5rem 3rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  border: none;
+  transition: var(--transition);
+  &:hover {
+    background-color: rgb(4, 130, 8);
+  }
+}
+
+.termsCondition {
+  max-width: 500px;
+  width: auto;
+  color: bl--color-black;
+}
+.selectDish {
+  color: var(--color-black);
+  border-radius: 0.2rem;
+  border: 1px solid var(--color-primary2);
+  background-color: rgba(26, 0, 0, 0.041);
+  padding: 1rem;
+  max-width: auto;
+  width: auto;
+  margin-top: 4rem auto;
+}
+
+.statusContainer {
+  margin: auto;
+  padding: 1rem;
+}
+
+//-=-=-=-=-=-=-=- Media Query.
+@media screen and (max-width: 1200px) {
+}
+@media screen and (max-width: 1024px) {
+  .contactContainer {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .contactForm {
+    margin-bottom: 2rem;
+  }
+  .form {
+    input,
+    textarea {
+      max-width: 600px;
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 769px) {
+  .form {
+    input,
+    textarea {
+      max-width: 600px;
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .form {
+    input,
+    textarea {
+      max-width: 300px;
+      width: 100%;
+    }
+  }
+}
+
+.removeBtn {
+  background-color: transparent;
+  color: rgb(124, 47, 47);
+  position: relative;
+  font-size: 2rem;
+  top: 30%;
+  left: 50%;
+  transform: translate(-10%, -20%);
+  &:hover {
+    cursor: pointer;
+    color: red;
+  }
+}

@@ -1,0 +1,178 @@
+/* The Modal (background) */
+.modal {
+  display: flex; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modalContent {
+  position: relative;
+  background-color: #fefefe;
+  border-radius: 0.5rem;
+  margin: auto;
+  padding: 0;
+  max-width: 600px;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.imgEdit {
+  margin: 1rem;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: red;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.modalBody {
+  margin: 1rem;
+  border: 1px dashed black;
+}
+.btnDisabled {
+  display: none;
+}
+.btnActive {
+  background-color: rgb(7, 104, 88);
+  max-width: 300px;
+  width: 100%;
+  font-size: 1.2rem;
+  border: none;
+  margin: 0.5rem auto;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 0.2rem;
+  width: 100%;
+  color: #fefefe;
+  &:hover {
+    background-color: rgb(0, 144, 82);
+  }
+}
+
+// / drop zone css
+
+.dropzone {
+  position: relative;
+  border: 10px dotted #fff;
+  border-radius: 10px;
+  color: white;
+  font: bold 24px/200px arial;
+  height: 200px;
+  margin: 30px auto;
+  text-align: center;
+  width: 200px;
+}
+
+.dropzone.hover {
+  border: 10px solid #fe5;
+  color: #fe5;
+}
+
+.dropzone.dropped {
+  background: #222;
+  border: 10px solid #444;
+}
+
+.dropzone div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.uploadImgContainer {
+  position: relative;
+  border: 3px dashed rgb(0, 0, 0);
+  border-radius: 50%;
+}
+.dropzone img {
+  z-index: 1;
+  display: block;
+  border-radius: 50%;
+  max-width: 95%;
+  max-height: 95%;
+}
+.closeBtn {
+  position: absolute;
+  color: red;
+  top: -1rem;
+  right: -1rem;
+  z-index: 2;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+.editBtn {
+  position: absolute;
+  backdrop-filter: blur(15px);
+  background: rgba(0, 0, 0, 0.2);
+  color: rgb(13, 101, 159);
+  top: 0rem;
+  right: 0rem;
+  z-index: 2;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+    transition: var(--transition);
+  }
+}
+
+.dropzone [type="file"] {
+  cursor: pointer;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}

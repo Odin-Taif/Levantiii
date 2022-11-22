@@ -1,0 +1,178 @@
+.contactContainer {
+  display: flex;
+  margin: auto;
+  max-width: 1000px;
+  width: 100%;
+  height: 100%;
+  // background: linear-gradient(to bottom, var(--color-primary2), #000000);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.postCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+  max-width: 500px;
+  width: 100%;
+}
+.errorMsg {
+  text-align: left;
+  color: bl--color-black;
+  padding: 0.3rem;
+  background: linear-gradient(to left, var(--color-white), #e60000);
+  border-radius: 0.1rem;
+  margin-top: -1rem;
+}
+.whoAmI {
+  margin: auto;
+  color: var(--color-black);
+  border-bottom: 1px solid var(--color-primary2);
+  max-width: 300px;
+  width: 100%;
+  text-align: left;
+  text-align: left;
+}
+
+.contactForm {
+  padding: 1rem;
+  margin: auto;
+}
+/*++++++++++++   Form Styling  ++++++++++++++*/
+.form {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+
+  border-right: 1px solid var(--color-primary2);
+  border-left: 1px solid var(--color-primary2);
+  border-bottom: 1px solid var(--color-primary2);
+  padding: 1rem;
+  margin: auto;
+  max-width: auto;
+  width: auto;
+  height: auto;
+  border-radius: 0.1rem;
+  gap: 1.4rem;
+
+  input,
+  textarea {
+    color: var(--color-black);
+    background-color: transparent;
+    border-radius: 0.2rem;
+    border: 1px solid var(--color-primary2);
+    padding: 1rem;
+    resize: none;
+    max-width: 500px;
+    width: 500px;
+  }
+  input:focus {
+    background-color: var(--color-primary2);
+    color: var(--color-black);
+  }
+  textarea:focus {
+    background-color: var(--color-primary2);
+    color: var(--color-black);
+  }
+}
+.formHeader {
+  font-size: 1.4rem;
+  padding: 1rem;
+  margin: auto;
+  color: var(--color-black);
+  border-bottom: 1px solid var(--color-primary2);
+}
+
+.formBtn {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  width: max-content;
+  width: 100%;
+  margin: auto;
+  background-color: var(--color-gold);
+  display: inline-block;
+  color: var(--color-black);
+  padding: 0.5rem 3rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  border: none;
+  transition: var(--transition);
+  &:hover {
+    background-color: rgb(4, 130, 8);
+  }
+}
+
+.termsCondition {
+  max-width: 500px;
+  width: auto;
+  color: bl--color-black;
+}
+.selectDish {
+  color: var(--color-black);
+  border-radius: 0.2rem;
+  border: 1px solid var(--color-primary2);
+  background-color: rgba(26, 0, 0, 0.041);
+  padding: 1rem;
+  max-width: auto;
+  width: auto;
+  margin-top: 4rem auto;
+}
+
+.statusContainer {
+  margin: auto;
+  padding: 1rem;
+}
+
+//-=-=-=-=-=-=-=- Media Query.
+@media screen and (max-width: 1200px) {
+}
+@media screen and (max-width: 1024px) {
+  .contactContainer {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .contactForm {
+    margin-bottom: 2rem;
+  }
+  .form {
+    input,
+    textarea {
+      max-width: 600px;
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 769px) {
+  .form {
+    input,
+    textarea {
+      max-width: 600px;
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .form {
+    input,
+    textarea {
+      max-width: 300px;
+      width: 100%;
+    }
+  }
+}
+
+.removeBtn {
+  background-color: transparent;
+  color: rgb(124, 47, 47);
+  position: relative;
+  font-size: 2rem;
+  top: 30%;
+  left: 50%;
+  transform: translate(-10%, -20%);
+  &:hover {
+    cursor: pointer;
+    color: red;
+  }
+}
