@@ -5,7 +5,11 @@ import LevantiButton from "../reusableComponents/button/button";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
-function AddSocialMediaModal({ show, onClose }) {
+interface TOTO {
+  show: boolean;
+  onClose: () => void;
+}
+function AddSocialMediaModal({ show, onClose }: TOTO) {
   useEffect(() => {
     document.body.addEventListener("keydown", closeOnEscapeKeyDown);
     return function cleanUp() {
