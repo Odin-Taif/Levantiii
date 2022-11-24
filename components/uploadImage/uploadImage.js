@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import style from "./uploadImage.module.scss";
-import  Loader  from "../Loader/loader";
+import Loader from "../Loader/loader";
 import Image from "next/image";
 import userImg from "../../public/Assets/user.webp";
 

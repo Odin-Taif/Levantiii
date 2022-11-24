@@ -155,13 +155,13 @@ const BusinessCard = ({ id, name, email, imgUploaded, socialLinks }: Props) => {
           <div className={style.postCard}>
             <UploadImage
               // isLoading={isLoading}
-              show={showLoginModal}
+              // show={showLoginModal}
               setShowEditModal={setShowEditModal}
-              imageAsset={imageAsset}
+              // imageAsset={imageAsset}
               imgUploaded={imgUploaded}
-              saveImageAsset={saveImageAsset}
-              deleteUploadedImage={deleteUploadedImage}
-              uploadImage={uploadImage}
+              // saveImageAsset={saveImageAsset}
+              // deleteUploadedImage={deleteUploadedImage}
+              // uploadImage={uploadImage}
             />
           </div>
           {/* firebase practice */}
