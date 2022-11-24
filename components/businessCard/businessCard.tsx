@@ -45,15 +45,10 @@ const BusinessCard = ({ id, name, email, imgUploaded, socialLinks }: Props) => {
   const [showLoginModal, setShowEditModal] = useState<boolean>(false);
   const [showSocialMediaModal, setshowSocialMediaModall] =
     useState<boolean>(false);
-
   const [{ user, existedUser }, dispatch] = useStateValue();
   const { authUser, loading, signOutAndClear } = useAuth();
 
-  useEffect(() => {
-    if (authUser) {
-      fetchExistedUser(authUser.uid);
-    }
-  }, [imageAsset, authUser]);
+  useEffect(() => {}, [imageAsset, authUser]);
   //-=-=-=-=-=-=-=-=-=-=-=-=- add social link -=-=-=-=-=-=-=-|||||||||||||||||||
 
   ///-=-=-=-=-=-=-=-=-=-=-=-=-=-=- upload image -=-=-=-=-=-=-=-=-=-||||||||||||||||||||
