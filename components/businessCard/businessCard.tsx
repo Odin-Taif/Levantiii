@@ -154,7 +154,7 @@ const BusinessCard = ({ id, name, email, imgUploaded, socialLinks }: Props) => {
         <article className={style.profile}>
           <div className={style.postCard}>
             <UploadImage
-              isLoading={isLoading}
+              // isLoading={isLoading}
               show={showLoginModal}
               setShowEditModal={setShowEditModal}
               imageAsset={imageAsset}
