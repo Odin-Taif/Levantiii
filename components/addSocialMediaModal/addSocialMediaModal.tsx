@@ -21,7 +21,7 @@ function AddSocialMediaModal({ show, onClose }: TOTO) {
     return null;
   }
 
-  const closeOnEscapeKeyDown = (e) => {
+  const closeOnEscapeKeyDown = (e: any) => {
     if ((e.charCode || e.keyCode) === 27) {
       onClose();
     }
