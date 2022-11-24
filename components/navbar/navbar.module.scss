@@ -32,14 +32,17 @@
 
 .navLinks {
   display: flex;
-  color: gold;
+  color: var(--color-gold);
   padding: 2rem;
+  margin: auto;
   align-items: center;
   text-decoration: none;
-  padding: 0 1rem;
-  margin: auto;
+  // padding: 0 1rem;
+
   height: 100%;
   font-size: 1rem;
+  border-left: 1px solid var(--color-primary2);
+  // border-right: 1px solid gray;
   &:hover {
     background-color: var(--color-primary2);
     transition: all 0.5s ease-in-out;

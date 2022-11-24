@@ -34,30 +34,6 @@ export default function Login() {
   const [{ user, existedUser }, dispatch] = useStateValue();
   const { authUser, loading, signOutAndClear } = useAuth();
 
-  //-=-=-=-Sign in with email and password-=-=-=-=-=-=-||||||||||||||
-  // const signInWithEmailPassword = async ({ email, password }) => {
-  //   try {
-  //     const userCredential = await signInWithEmailAndPassword(
-  //       auth,
-  //       email,
-  //       password
-  //     );
-  //     dispatch({
-  //       type: actionType.SET_USER,
-  //       user: userCredential.user.providerData[0],
-  //     });
-  //     localStorage.setItem(
-  //       "user",
-  //       JSON.stringify(userCredential.user.providerData[0])
-  //     );
-  //     router.push(`/${userCredential.user.uid}`);
-  //   } catch (error) {
-  //     showLoginError(error);
-  //     const errorCode = error.code;
-  //     const errorMessage = error.message;
-  //   }
-  // };
-
   const showLoginError = (error) => {
     if (error.code == AuthErrorCodes.INVALID_PASSWORD) {
       setErrorMsg("Wrong Password, try again!");
@@ -229,7 +205,12 @@ export default function Login() {
             <button type="submit" className={style.formBtn}>
               Sign in
             </button>
-            No account? <Link href="/sign_up">Create one</Link>
+            <div style={{ color: "black" }}>
+              No account?
+              <Link href="/sign_up">
+                <a style={{ color: "blue" }}> Create one</a>
+              </Link>
+            </div>
           </Form>
         </Formik>
       </div>

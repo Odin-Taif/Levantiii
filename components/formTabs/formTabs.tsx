@@ -1,10 +1,8 @@
-import { Fragment, useEffect, useState } from "react";
+import { Fragment } from "react";
 import { Tab } from "@headlessui/react";
 import Login from "../auth/signIn/loginIn";
-import Signup from "../auth/signUp/signUp";
 import { motion } from "framer-motion";
 import style from "./formTabs.module.scss";
-import { useStateValue } from "../../context/stateProvider";
 import SignUp from "../auth/signUp/signUp";
 
 function FormTabs() {
@@ -36,7 +34,6 @@ function FormTabs() {
               </motion.button>
             )}
           </Tab>
-          {/* ...  */}
         </Tab.List>
         <Tab.Panels className={style.tabContainer}>
           <Tab.Panel>

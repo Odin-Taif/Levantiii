@@ -4,11 +4,14 @@ import QrImage from "../../public/Assets/qrcode.webp";
 import QrModal from "../Modals/qrModal/qrModal";
 import style from "./header.module.scss";
 import { motion } from "framer-motion";
-import { useStateValue } from "../../context/stateProvider";
 import FormTabs from "../formTabs/formTabs";
+import { useAuth } from "../../context/authUserContext";
 
 const Header = () => {
+  const { authUser } = useAuth();
   const [show, setShow] = useState(false);
+  useEffect(() => {}, [authUser]);
+
   return (
     <header>
       <div className={style.headerContainer}>
@@ -38,7 +41,9 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <div className={style.signupContainer}>{<FormTabs />}</div>
+        {!authUser && (
+          <div className={style.signupContainer}>{<FormTabs />}</div>
+        )}
       </div>
     </header>
   );

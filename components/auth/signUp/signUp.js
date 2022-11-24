@@ -1,19 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useStateValue } from "../../../context/stateProvider";
 import { actionType } from "../../../context/reducer";
 import { useRouter } from "next/router";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
-
+import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import {
-  deleteObject,
-  getDownloadURL,
-  ref,
-  uploadBytesResumable,
-} from "firebase/storage";
-
-import {
-  signInWithPopup,
   AuthErrorCodes,
   createUserWithEmailAndPassword,
   GoogleAuthProvider,
@@ -22,7 +14,6 @@ import {
 import { storage, auth } from "../../../Firebase/firebase.config";
 import {
   saveItem,
-  getItems,
   getAuthenticatedUser,
 } from "../../../utils/firebaseFunction";
 import UploadImage from "./uploadImage/uploadImage";
@@ -39,9 +30,6 @@ const Signup = () => {
   const [storedUser, setstoredUser] = useState(null);
   const [errorMsg, setErrorMsg] = useState("");
   const router = useRouter();
-  // useEffect(() => {
-  //   monitorAuthState();
-  // }, [user]);
 
   const uploadImage = (e) => {
     e.preventDefault();
@@ -80,9 +68,6 @@ const Signup = () => {
       }
     );
   };
-
-  //-=-=-=-=-=-=-=-Delete the Image-=-=-=-=-//
-
   //-=-=-=-Save the input data to firestore db-=-=-=-=-///
   const saveDetails = async (data) => {
     console.log("hello this is save details");
@@ -102,12 +87,10 @@ const Signup = () => {
       }, 4000);
     }
   };
-
   //-=-=-=-=-Clears the data after saveing or submiting-=-=-=-=-||||||
   const clearData = () => {
     setImageAsset(null);
   };
-
   //--=-=-=-=- Fetchs the data of the existed user(in sign up is the newlly created user)-=-=-=-=-=//
   const fetchExistedUser = async (userID) => {
     console.log("this is the fetch existed user function");
@@ -119,7 +102,6 @@ const Signup = () => {
       });
     });
   };
-
   const showLoginError = (error) => {
     if (error.code == AuthErrorCodes.INVALID_PASSWORD) {
       setErrorMsg("Wrong Password, try again!");
@@ -127,9 +109,7 @@ const Signup = () => {
       setErrorMsg(`${error.message}`);
     }
   };
-
   //-=-=-=-=-=-=- Sign up method
-
   const signUp = async (data) => {
     try {
       const userCredential = await createUserWithEmailAndPassword(
@@ -140,6 +120,10 @@ const Signup = () => {
       dispatch({
         type: actionType.SET_USER,
         user: userCredential.user.providerData[0],
+      });
+      dispatch({
+        type: actionType.SET_USER,
+        authUser: userCredential.user.providerData[0],
       });
       localStorage.setItem(
         "user",
@@ -178,9 +162,6 @@ const Signup = () => {
   return (
     <div className={style.contactContainer}>
       <div className={style.contactForm}>
-        {/* <button className={style.formBtn} onClick={() => signInWithPop()}>
-          Google Sign in
-        </button> */}
         <Formik
           initialValues={{
             id: "",
@@ -214,13 +195,13 @@ const Signup = () => {
             setTimeout(() => {
               signUp(values);
               alert(JSON.stringify(values, null, 2));
-              console.log(values);
-            }, 400);
+              // console.log(values);
+            }, 4000);
           }}
         >
           <Form className={style.form}>
             <label className={style.formHeader}>
-              | start creating your network card.
+              |||||-start creating your Levanti card.
             </label>
             {/* Name Field */}
             <Field name="name" type="text" placeholder="Display name." />
@@ -246,7 +227,6 @@ const Signup = () => {
             <ErrorMessage name="passwordConfirmation">
               {(msg) => <div className={style.errorMsg}>{msg}</div>}
             </ErrorMessage>
-
             {/* mobile number */}
             <Field
               name="mobile"
@@ -259,7 +239,7 @@ const Signup = () => {
             <button type="submit" className={style.formBtn}>
               Sign up
             </button>
-            <button onClick={() => logout()}>Log out</button>
+            {/* <button onClick={() => logout()}>Log out</button> */}
 
             <div className={style.termsCondition}>
               By clicking Sign Up, you agree to our Terms. Learn how we collect,

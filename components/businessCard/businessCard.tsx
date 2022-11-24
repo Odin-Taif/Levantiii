@@ -4,9 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useStateValue } from "../../context/stateProvider";
 import { actionType } from "../../context/reducer";
-
 // import { Qrcode } from "./qrModal/qrModal";
-
 //-=-=-=- ICons import-=-=-=-=-=-=-=-=-|||||||||||||||||||
 import { FiShare, FiLogOut, FiEdit } from "react-icons/fi";
 import { MdQrCode, MdSaveAlt } from "react-icons/md";
@@ -126,7 +124,7 @@ const BusinessCard = ({ id, name, email, imgUploaded, socialLinks }: Props) => {
   };
   // fetch  authenticted user-=-=-=-=-=-=-=-=-=-=-=-=-=-=-||||||||||||||||
   const fetchExistedUser = async (id: string) => {
-    console.log("this is the fetch existed user function");
+    // console.log("this is the fetch existed user function");
     await getAuthenticatedUser(id).then((data) => {
       localStorage.setItem("existedUser", JSON.stringify(data));
       dispatch({
@@ -135,9 +133,7 @@ const BusinessCard = ({ id, name, email, imgUploaded, socialLinks }: Props) => {
       });
     });
   };
-
   /// delete image-=-=-=-=-=-=-=-=-=-=--||||||||||||||||||
-
   return (
     <>
       {/* <QrModal onClose={() => setshowQr(false)} showQr={showQr} id={id} /> */}
@@ -151,7 +147,6 @@ const BusinessCard = ({ id, name, email, imgUploaded, socialLinks }: Props) => {
         deleteUploadedImage={deleteUploadedImage}
         uploadImage={uploadImage}
       />
-
       <AddSocialMediaModal
         onClose={() => setshowSocialMediaModall(false)}
         show={showSocialMediaModal}
@@ -170,9 +165,7 @@ const BusinessCard = ({ id, name, email, imgUploaded, socialLinks }: Props) => {
               uploadImage={uploadImage}
             />
           </div>
-
           {/* firebase practice */}
-
           <div className={style.funcContianer}>
             <motion.div whileTap={{ scale: 1.2 }}>
               <FiShare style={{ cursor: "pointer" }} />
@@ -181,10 +174,7 @@ const BusinessCard = ({ id, name, email, imgUploaded, socialLinks }: Props) => {
               <MdSaveAlt style={{ cursor: "pointer" }} />
             </motion.div>
             <motion.div whileTap={{ scale: 1.2 }}>
-              <FiEdit
-                style={{ cursor: "pointer" }}
-                onClick={() => saveImageAsset(imageAsset)}
-              />
+              <FiEdit style={{ cursor: "pointer" }} />
             </motion.div>
             <motion.div whileTap={{ scale: 1.2 }}>
               <MdQrCode
@@ -194,20 +184,21 @@ const BusinessCard = ({ id, name, email, imgUploaded, socialLinks }: Props) => {
             </motion.div>
           </div>
         </article>
-
         <div className={style.intro}>
           <h2>{name}</h2>
         </div>
 
         <div className={style.linksContainer}>
-          <div className={style.linkWrapper}>
-            <Link href={`mailto:${email}`}>Email Me</Link>
-            <AiOutlineMail
-              size={30}
-              color={"white"}
-              onClick={() => console.log("add")}
-            />
-          </div>
+          <Link href={`mailto:${email}`}>
+            <div className={style.linkWrapper}>
+              Email Me
+              <AiOutlineMail
+                size={30}
+                color={"white"}
+                onClick={() => console.log("add")}
+              />
+            </div>
+          </Link>
           {socialLinks &&
             socialLinks.map((item, index) => (
               <SociaMediaLink {...item} key={index} />

@@ -36,15 +36,15 @@ const Nav = () => {
       <nav className={scrollNav ? style.scrollNavTrans : style.scrollNavBlack}>
         <LevantiskLogo toggleHome={toggleHome} />
         <div className={style.navBarContainer}>
-          <li className={style.navLinks}>
-            <Link href={"/"}>Home</Link>
-          </li>
-          <li className={style.navLinks}>
-            <Link href={"/"}>About</Link>
-          </li>
-          <li className={style.navLinks}>
-            <Link href={"/"}>Contact</Link>
-          </li>
+          <Link href={"/"}>
+            <li className={style.navLinks}>Home</li>
+          </Link>
+          <Link href={"/"}>
+            <li className={style.navLinks}>About</li>
+          </Link>
+          <Link href={"/"}>
+            <li className={style.navLinks}>Contact</li>
+          </Link>
         </div>
         {authUser && <Profile />}
       </nav>

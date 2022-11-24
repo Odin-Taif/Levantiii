@@ -21,8 +21,9 @@ const SignUp = () => {
   const [passwordTwo, setPasswordTwo] = useState("");
   const [{ user }, dispatch] = useStateValue();
   const router = useRouter();
-  //Optional error handling
   const [error, setError] = useState(null);
+  //Optional error handling
+
   const onSubmit = (event) => {
     setError(null);
     //check if passwords match. If they do, create user in Firebase

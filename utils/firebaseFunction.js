@@ -28,7 +28,7 @@ export const getAuthenticatedUser = async (userID) => {
   const docRef = doc(db, "users", `${userID}`);
   const docSnap = await getDoc(docRef);
   if (docSnap.exists()) {
-    console.log("Document data:", docSnap.data());
+    // console.log("Document data:", docSnap.data());
   } else {
     console.log("No such document!");
   }

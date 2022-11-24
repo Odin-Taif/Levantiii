@@ -51,7 +51,6 @@ const Qrcode = () => {
               alt={"image"}
               className={style.QrImg}
             />
-
             <a
               variant="contained"
               color="success"

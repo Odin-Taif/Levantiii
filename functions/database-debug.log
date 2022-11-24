@@ -1,14 +1,4 @@
-23:41:34.211 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
-23:41:35.488 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000
-23:42:19.321 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO com.firebase.core.namespace.NamespaceActor - levantiiii-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 582ms, init: 0ms
-23:42:19.533 [NamespaceSystem-blocking-namespace-operation-dispatcher-6] INFO com.firebase.core.namespace.StateManager - Namespace levantiiii-default-rtdb status Active to Active
-00:08:08.055 [FirebaseWorkerPool-1-3] WARN com.firebase.core.persistence.backend.dummy.EmulatorMetadataPersistence - Multiple projectIds are not recommended in single project mode. Requested 
-namespace levantiiii, but the emulator is configured for levantiiii-default-rtdb. To 
-opt-out of single project mode add/set the single_project_mode: false property in 
-the firebase.json emulators config. 
-00:08:08.105 [NamespaceSystem-akka.actor.default-dispatcher-10] INFO com.firebase.core.namespace.NamespaceActor - levantiiii successfully activated FBKV (SurveyIdle(0)) wait: 9ms, init: 0ms
-00:08:08.629 [Thread-0] INFO com.firebase.server.forge.App$ - Attempting graceful shutdown.
-00:08:08.646 [NamespaceSystem-akka.actor.default-dispatcher-8] INFO com.firebase.core.namespace.Terminator$Terminator - 2 actors left to terminate: levantiiii-default-rtdb, levantiiii
-00:08:08.663 [NamespaceSystem-akka.actor.default-dispatcher-10] INFO com.firebase.core.namespace.NamespaceActor - stopped namespace actor for levantiiii
-00:08:08.663 [NamespaceSystem-akka.actor.default-dispatcher-8] INFO com.firebase.core.namespace.NamespaceActor - stopped namespace actor for levantiiii-default-rtdb
-00:08:08.673 [Thread-0] INFO com.firebase.server.forge.App$ - Graceful shutdown complete.
+20:17:18.701 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+20:17:19.002 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000
+20:17:38.435 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO com.firebase.core.namespace.NamespaceActor - levantiiii-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 553ms, init: 0ms
+20:17:38.569 [NamespaceSystem-blocking-namespace-operation-dispatcher-7] INFO com.firebase.core.namespace.StateManager - Namespace levantiiii-default-rtdb status Active to Active
