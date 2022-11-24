@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { getAuthenticatedUser, getUserID } from "../../utils/firebaseFunction";
 
 type Data = {
-  serverExistedUser?: ExistedUser;
+  serverExistedUser: string;
 };
 
 export default async function handler(
@@ -11,7 +11,7 @@ export default async function handler(
 ) {
   // const userID = await getUserID();
   // const serverExistedUser = await getAuthenticatedUser(userID);
-
+  const serverExistedUser = "tototo";
   res.status(200).json({
     serverExistedUser,
   });
