@@ -43,12 +43,6 @@ const SignUp = () => {
             JSON.stringify(authUser.user.providerData[0])
           );
           router.push(`/${authUser.user.uid}`);
-          // data.id = `${authUser.user.uid}`;
-          // data.imageAsset = imageAsset;
-          // console.log(data);
-          //   await saveDetails(data);
-          //   await fetchExistedUser(data.id);
-          //   router.push(`/${data.id}`);
         })
         .catch((error) => {
           // An error occurred. Set error message to be displayed to user
@@ -57,25 +51,6 @@ const SignUp = () => {
     else setError("Password do not match");
     event.preventDefault();
   };
-
-  // try {
-
-  //   localStorage.setItem(
-  //     "user",
-  //     JSON.stringify(userCredential.user.providerData[0])
-  //   );
-  //   data.id = `${userCredential.user.uid}`;
-  //   data.imageAsset = imageAsset;
-  //   console.log(data);
-  //   await saveDetails(data);
-  //   await fetchExistedUser(data.id);
-  //   router.push(`/${data.id}`);
-  //   console.log("sign up is done");
-  // } catch (error) {
-  //   showLoginError(error);
-  //   const errorCode = error.code;
-  //   const errorMessage = error.message;
-  // }
 
   return (
     <Container className="text-center" style={{ padding: "40px 0px" }}>
