@@ -5,21 +5,11 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useAuth } from "../../context/authUserContext";
 
-import {
-  getAuth,
-  signInWithPopup,
-  GoogleAuthProvider,
-  connectAuthEmulator,
-  onAuthStateChanged,
-  signOut,
-} from "firebase/auth";
-
 import { useStateValue } from "../../context/stateProvider";
 import { actionType } from "../../context/reducer";
 import MuiDrawer from "../drawer/drawer.js";
 // import { LevantiksButton } from "../ReusableComponents/reuseableHub.ts";
 import style from "./profile.module.scss";
-import { auth } from "../../Firebase/firebase.config";
 
 const Profile = () => {
   const [{ user, existedUser }, dispatch] = useStateValue();

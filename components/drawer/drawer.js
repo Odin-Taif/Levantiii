@@ -48,12 +48,9 @@ function MuiDrawer({ drawerOpen, setDrawerOpen, onHover }) {
                 <span>Signed in as {existedUser.name}</span>
                 <div style={{ marginTop: "4rem" }}>
                   <ul>
-                    <Link href={`/${existedUser.id}`}>
+                    <Link href={`users/${existedUser.id}`}>
                       <li className={style.linkWrapper} onClick={onHover}>
-                        <a onClick={() => setDrawerOpen(false)}>
-                          {" "}
-                          Your profile
-                        </a>
+                        <a onClick={() => setDrawerOpen(false)}>Your profile</a>
                       </li>
                     </Link>
                     <Link href={`/${existedUser.id}`}>

@@ -143,22 +143,6 @@ const Signup = () => {
     }
   };
 
-  //-=-=-=-= logut -=-=-=-=-=-=-=-=
-  const logout = async () => {
-    console.log("hello for log out");
-    await signOut(auth);
-    window.localStorage.clear();
-    dispatch({
-      type: actionType.SET_USER,
-      user: null,
-    });
-    dispatch({
-      type: actionType.SET_USER,
-      existedUser: {},
-    });
-    router.push(`/`);
-  };
-
   return (
     <div className={style.contactContainer}>
       <div className={style.contactForm}>
@@ -239,7 +223,6 @@ const Signup = () => {
             <button type="submit" className={style.formBtn}>
               Sign up
             </button>
-            {/* <button onClick={() => logout()}>Log out</button> */}
 
             <div className={style.termsCondition}>
               By clicking Sign Up, you agree to our Terms. Learn how we collect,

@@ -25,6 +25,7 @@ export const getUserID = async () => {
 };
 //-=-=-=-=-=-=-= get authenticated user-=-=-=-=-=-|||||||||||||||||
 export const getAuthenticatedUser = async (userID) => {
+  console.log(userID);
   const docRef = doc(db, "users", `${userID}`);
   const docSnap = await getDoc(docRef);
   if (docSnap.exists()) {

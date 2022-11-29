@@ -17,6 +17,8 @@ const Nav = () => {
     if (!loading && !authUser) router.push("/");
   }, [authUser, loading]);
 
+  // console.log(authUser);
+
   //===============Smooth scrollin section.
   const [scrollNav, setScrollNav] = useState(false);
   const changeNav = () => {

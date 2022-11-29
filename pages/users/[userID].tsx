@@ -1,10 +1,10 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useState, useEffect } from "react";
-import { useStateValue } from "../context/stateProvider";
-import BusinessCard from "../components/businessCard/businessCard";
-import { useAuth } from "../context/authUserContext";
-import { auth } from "../Firebase/firebase.config";
+import { useStateValue } from "../../context/stateProvider";
+import BusinessCard from "../../components/businessCard/businessCard";
+import { useAuth } from "../../context/authUserContext";
+import { auth } from "../../Firebase/firebase.config";
 import { Container, Row, Col, Button } from "reactstrap";
 import { useRouter } from "next/router";
 

@@ -5,7 +5,7 @@ import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import style from "./login.module.scss";
 import { FcGoogle } from "react-icons/fc";
-import { FaLinkedin } from "react-icons/fa";
+import { FaLinkedin, FaFacebook } from "react-icons/fa";
 import {
   signInWithPopup,
   GoogleAuthProvider,
@@ -59,11 +59,11 @@ export default function Login() {
     }
   };
   const pushToUserProfile = (userID) => {
-    router.push(`/${userID}`);
+    router.push(`users/${userID}`);
   };
   // popUp Sign in function -=-=-=-=-=-=-=-=-=-=-=-=-=-=||||||||||||
   const popUpSignIn = async (provider) => {
-    if (!user) {
+    if (!authUser) {
       // const {
       //   user: { refreshToken, providerData },
       // } = await signInWithPopup(auth, provider);
@@ -90,7 +90,6 @@ export default function Login() {
             socialLinks: [{ linkName: "facebook" }, { linkName: "Instagram" }],
           };
           saveDetails(newUser);
-          // console.log(newUser);
           dispatch({
             type: actionType.SET_EXISTED_USER,
             existedUser: newUser,
@@ -128,13 +127,14 @@ export default function Login() {
           <p> Google Sign in</p>
         </button>
         <button className={style.federatedIDBtn} onClick={() => popUpSignIn()}>
-          <FaLinkedin size={25} style={{ margin: "auto 1rem" }} />
-          <p> Google Sign in</p>
+          <FaFacebook size={25} style={{ margin: "auto 1rem" }} />
+          <p> Facebook Sign in</p>
         </button>
         <button className={style.federatedIDBtn} onClick={() => popUpSignIn()}>
-          <FcGoogle size={25} style={{ margin: "auto 1rem" }} />
-          <p> Google Sign in</p>
+          <FaLinkedin size={25} style={{ margin: "auto 1rem" }} />
+          <p> Linkedin Sign in</p>
         </button>
+
         <Formik
           initialValues={{
             email: email,
@@ -158,11 +158,9 @@ export default function Login() {
                   console.log(
                     "Success. The user signd in from signInEmailPass"
                   );
-                  console.log(authUser.user.uid);
-                  dispatch({
-                    type: actionType.SET_USER,
-                    user: authUser.user.providerData[0],
-                  });
+                  getAuthenticatedUser(authUser.user.uid);
+                  // console.log(auth);
+                  // console.log(authUser.user.uid);
                   dispatch({
                     type: actionType.SET_USER,
                     authUser: authUser.user.providerData[0],
@@ -171,7 +169,7 @@ export default function Login() {
                     "user",
                     JSON.stringify(authUser.user.providerData[0])
                   );
-                  router.push(`/${authUser.user.uid}`);
+                  router.push(`users/${authUser.user.uid}`);
                 })
                 .catch((error) => {
                   setError(error.message);
