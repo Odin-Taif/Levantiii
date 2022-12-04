@@ -1,10 +1,7 @@
-import { useState } from "react";
 import Link from "next/link";
-import { Drawer, Box, Typography, IconButton } from "@mui/material";
+import { Drawer, Box, Typography } from "@mui/material";
 import style from "./drawer.module.scss";
-import { AiOutlineMenu } from "react-icons/ai";
 import { MdClose } from "react-icons/md";
-
 import { useStateValue } from "../../context/stateProvider";
 import { actionType } from "../../context/reducer";
 import { useAuth } from "../../context/authUserContext";
@@ -14,13 +11,17 @@ function MuiDrawer({ drawerOpen, setDrawerOpen, onHover }) {
   const signooout = () => {
     signOutAndClear();
     window.localStorage.clear();
-    dispatch({
-      type: actionType.SET_USER,
-      user: null,
-    });
+    // dispatch({
+    //   type: actionType.SET_USER,
+    //   user: null,
+    // });
     onHover();
   };
 
+  const handelLink = () => {
+    onHover();
+    setDrawerOpen(false);
+  };
   return (
     <>
       <Drawer
@@ -43,31 +44,31 @@ function MuiDrawer({ drawerOpen, setDrawerOpen, onHover }) {
             >
               <MdClose />
             </button>
-            {existedUser && (
+            {authUser && (
               <>
                 <span>Signed in as {existedUser.name}</span>
                 <div style={{ marginTop: "4rem" }}>
                   <ul>
-                    <Link href={`users/${existedUser.id}`}>
-                      <li className={style.linkWrapper} onClick={onHover}>
-                        <a onClick={() => setDrawerOpen(false)}>Your profile</a>
+                    <Link href={`/users/${existedUser.id}`}>
+                      <li className={style.linkWrapper} onClick={handelLink}>
+                        Your profile
                       </li>
                     </Link>
                     <Link href={`/${existedUser.id}`}>
-                      <li className={style.linkWrapper} onClick={onHover}>
-                        <a onClick={() => setDrawerOpen(false)}> Upgrade</a>
+                      <li className={style.linkWrapper} onClick={handelLink}>
+                        Upgrade
                       </li>
                     </Link>
                     <Link href={`/${existedUser.id}`}>
-                      <li className={style.linkWrapper} onClick={onHover}>
-                        <a onClick={() => setDrawerOpen(false)}> Help</a>
+                      <li className={style.linkWrapper} onClick={handelLink}>
+                        Help
                       </li>
                     </Link>
                     <li
                       className={style.linkWrapper}
                       onClick={() => signooout()}
                     >
-                      <a> Sign out</a>
+                      Sign out
                     </li>
                   </ul>
                 </div>

@@ -23,12 +23,9 @@
   border-bottom: 1px solid rgb(0, 0, 0);
   text-decoration: none;
   transition: 0.2s ease-in-out;
-  a {
-    color: var(--color-black);
-    &:hover {
-      color: var(--color-gold);
-      cursor: pointer;
-    }
+  &:hover {
+    color: var(--color-gold);
+    cursor: pointer;
   }
 }
 //-=-=-=-=-=-=-=-Medai Querey-=-=-=-=-=

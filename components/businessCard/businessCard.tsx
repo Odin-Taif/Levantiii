@@ -45,7 +45,7 @@ const BusinessCard = ({ id, name, email, imgUploaded, socialLinks }: Props) => {
   const [showLoginModal, setShowEditModal] = useState<boolean>(false);
   const [showSocialMediaModal, setshowSocialMediaModall] =
     useState<boolean>(false);
-  const [{ user, existedUser }, dispatch] = useStateValue();
+  const [{ existedUser }, dispatch] = useStateValue();
   const { authUser, loading, signOutAndClear } = useAuth();
 
   useEffect(() => {}, [imageAsset, authUser]);
@@ -97,6 +97,7 @@ const BusinessCard = ({ id, name, email, imgUploaded, socialLinks }: Props) => {
     try {
       await saveImage(imageAsset, id);
       setImageAsset(null);
+      fetchExistedUser(id);
       // console.log(`this is the image Asset ${imageAsset}`);
       // console.log(`this is the image uploaded${imgUploaded}`);
       // console.log(savedImage);

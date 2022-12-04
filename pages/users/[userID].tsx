@@ -5,18 +5,18 @@ import { useStateValue } from "../../context/stateProvider";
 import BusinessCard from "../../components/businessCard/businessCard";
 import { useAuth } from "../../context/authUserContext";
 import { auth } from "../../Firebase/firebase.config";
-import { Container, Row, Col, Button } from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
 import { useRouter } from "next/router";
 
 const BusinessCardPage = () => {
   const [{ user, existedUser }, dispatch] = useStateValue();
   const { authUser, loading, signOutAndClear } = useAuth();
   const router = useRouter();
-  // console.log(user);
+
   useEffect(() => {
     if (!loading && !authUser) router.push("/");
   }, [authUser, loading]);
-  // console.log(authUser);
+
   return (
     <>
       <Head>
